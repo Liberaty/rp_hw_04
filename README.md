@@ -46,7 +46,7 @@
 
 - В файле [**mysql.tf**](https://github.com/Liberaty/rp_hw_04/blob/main/mysql.tf) описываем создание кластера с необходимыми параметрами и созданием БД.
 
-   После применения конфигурации, проверим, что все ресурсы создались в облаке:
+После применения конфигурации, проверим, что все ресурсы создались в облаке:
 
 - Сети в разных зонах:
 
@@ -72,7 +72,53 @@
 
 ![1.7.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/1.6.png?raw=true)
 
-2. 
+2. Настроим с помощью Terraform кластер Kubernetes:
+
+- Опишем создание кластера с сервисными аккаунтами в [**k8s.tf**](https://github.com/Liberaty/rp_hw_04/blob/main/k8s.tf), добавим в [**variables.tf**](https://github.com/Liberaty/rp_hw_04/blob/main/variables.tf) необходимые переменные
+
+- Добавим возможность шифрования ключом из [**kms.tf**](https://github.com/Liberaty/rp_hw_04/blob/main/kms.tf)
+
+После применения конфигурации, проверим, что все ресурсы создались в облаке:
+
+- Сервисный аккаунт:
+
+![2.1.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/2.1.png?raw=true)
+
+- Группа безопасности:
+
+![2.2.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/2.2.png?raw=true)
+
+- Ключ шифрования:
+
+![2.3.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/2.3.png?raw=true)
+
+- Кластер:
+
+![2.4.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/2.4.png?raw=true)
+
+- Группы узлов с автомасштабированием:
+
+![2.5.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/2.5.png?raw=true)
+
+- Ноды:
+
+![2.6.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/2.6.png?raw=true)
+
+- Подключаемся к кластеру с помощью kubectl и проверяем список нод:
+
+![2.7.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/2.8.png?raw=true)
+
+- Создание микросервиса phpmyadmin с сервисом Load Balancer описываем также в [**k8s.tf**](https://github.com/Liberaty/rp_hw_04/blob/main/k8s.tf), из [**outputs.tf**](https://github.com/Liberaty/rp_hw_04/blob/main/outputs.tf) берем IP балансера и адрес базы данных:
+
+![2.8.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/2.8.png?raw=true)
+
+- Проверяем что страница доступна:
+
+![2.9.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/2.9.png?raw=true)
+
+- И подключаемся к базе данных:
+
+![2.10.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/2.10.png?raw=true)
 
 ### Правила приёма работы
 
