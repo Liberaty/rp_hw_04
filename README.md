@@ -106,7 +106,7 @@
 
 - Подключаемся к кластеру с помощью kubectl и проверяем список нод:
 
-![2.7.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/2.8.png?raw=true)
+![2.7.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/2.7.png?raw=true)
 
 - Создание микросервиса phpmyadmin с сервисом Load Balancer описываем также в [**k8s.tf**](https://github.com/Liberaty/rp_hw_04/blob/main/k8s.tf), из [**outputs.tf**](https://github.com/Liberaty/rp_hw_04/blob/main/outputs.tf) берем IP балансера и адрес базы данных:
 
