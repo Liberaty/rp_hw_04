@@ -40,8 +40,39 @@
 
 ## Решение
 
-1. 
+1. Настроим с помощью Terraform кластер баз данных MySQL:
 
+- Описываем переменные в [**variables.tf**](https://github.com/Liberaty/rp_hw_04/blob/main/variables.tf), где указываем private и public сети во всех 3 зонах яндекса. Далее в файле [**vpc.tf**](https://github.com/Liberaty/rp_hw_04/blob/main/vpc.tf) опишем создание ресурсов сетей, nat шлюза и таблицы маршрутизации.
+
+- В файле [**mysql.tf**](https://github.com/Liberaty/rp_hw_04/blob/main/mysql.tf) описываем создание кластера с необходимыми параметрами и созданием БД.
+
+   После применения конфигурации, проверим, что все ресурсы создались в облаке:
+
+- Сети в разных зонах:
+
+![1.1.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/1.1.png?raw=true)
+
+- Таблица маршрутизации через nat gateway:
+
+![1.2.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/1.2.png?raw=true)
+
+- Кластер MySQL:
+
+![1.3.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/1.3.png?raw=true)
+
+- Хосты:
+
+![1.4.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/1.4.png?raw=true)
+
+- Пользователи:
+
+![1.5.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/1.5.png?raw=true)
+
+- База данных:
+
+![1.7.png](https://github.com/Liberaty/rp_hw_04/blob/main/img/1.6.png?raw=true)
+
+2. 
 
 ### Правила приёма работы
 
